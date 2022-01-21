@@ -1,0 +1,311 @@
+/* Web Fonts */
+
+@font-face {
+  font-family: "Abolition Regular";
+  src: url("../fonts/abolition-regular-webfont.eot");
+  src: url("../fonts/abolition-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/abolition-regular-webfont.woff") format("woff"),
+    url("../fonts/abolition-regular-webfont.ttf") format("truetype");
+}
+
+/* Base Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #878787;
+  margin: 0;
+  font: 1em/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2 {
+  font-family: "Abolition Regular", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+  font-size: 5.625rem; /* 90px/16px  */
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.3;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8);
+  margin: 12px 0 0;
+}
+
+h2 {
+  font-size: 3.3125em; /* 53px/16px  */
+  font-weight: normal;
+  line-height: 1.1;
+  margin: 0 0 0.5em; /* 0 0 26px */
+}
+
+h3 {
+  font-size: 1.25em; /* 20px/16px  */
+  color: #48525c;
+  line-height: 1.2;
+  margin-bottom: 1.7em; /* 34px */
+}
+
+.profile-image {
+  margin-top: 50px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid white;
+  transition: all 0.5s;
+}
+.profile-image:hover {
+  transform: scale(1.2) rotate(360deg);
+}
+
+#fullstackimg {
+  width: 100%;
+  height: 100%;
+}
+
+img {
+  max-width: 100%;
+  width: 10em;
+  height: 20rem;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+img.landscape_image {
+  width: 75%;
+  height: 75%;
+}
+
+ul,
+ol {
+  margin: 30px 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Pseudo-classes */
+
+a:link {
+  color: rgb(255, 169, 73);
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: rgba(255, 169, 73, 0.4);
+}
+
+a:active {
+  color: lightcoral;
+}
+
+#resources {
+  height: 2rem;
+}
+
+/* Main Styles */
+
+.main-header {
+  padding-top: 170px;
+  height: 850px;
+  background: linear-gradient(#1f6ab1, transparent 70%),
+    linear-gradient(0deg, #fff, transparent 40%),
+    #bbe7f8 url("../img/skye_port.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.title {
+  color: white;
+  font-size: 3rem; /* 26px/16px */
+  letter-spacing: 0.045em;
+  font-weight: 200;
+  border-bottom: 2px solid;
+  padding-bottom: 10px;
+}
+
+.intro {
+  font-size: 1.25em; /* 20px/16px */
+  line-height: 1.6;
+  margin-top: 10rem;
+}
+
+.primary-content,
+.main-header,
+.main-footer {
+  text-align: center;
+}
+
+.primary-content {
+  padding-top: 25px;
+  padding-bottom: 95px;
+}
+
+.secondary-content {
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
+
+.callout {
+  font-size: 1.25em;
+  border-bottom: 3px solid;
+  padding: 0 9px 3px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.main-footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  border-bottom: 10px solid #1f6ab1;
+}
+
+.t-border {
+  border-top: 2px solid #dfe2e6;
+}
+
+.portfolio-block {
+  background-color: #1f6ab1;
+}
+
+/* Layout Styles */
+
+.primary-content,
+.secondary-content {
+  width: 75%;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: auto;
+  max-width: 960px;
+}
+
+.primary-content {
+  margin-top: 5rem;
+}
+
+.portfolio {
+  color: solid black;
+  font-size: 1.5em;
+  text-align: center;
+  padding: 18% 24%;
+  margin: 105px 0 60px;
+  background: linear-gradient(#fff, transparent 100%),
+    linear-gradient(0deg, rgb(163, 163, 163), transparent 100%),
+    #1f6ab1 url("../img/portfolio2.jpg") no-repeat center;
+  background-size: cover;
+  box-shadow: inset 0 0 50px 10px #fff;
+  border-radius: 10px;
+}
+
+.arrow {
+  width: 50px;
+  margin-top: 150px;
+}
+
+/* Floated Columns */
+
+.resorts,
+.tips {
+  width: 43.5%;
+}
+
+.tips {
+  float: right;
+}
+
+.resorts {
+  float: left;
+}
+
+/* Float Clearfix */
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Media Queries */
+
+@media (max-width: 1024 px) {
+  .primary-content,
+  .secondary-content {
+    width: 90%;
+  }
+  .portfolio {
+    padding: 10% 12%;
+    margin: 50px 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .primary-content,
+  .secondary-content {
+    width: 100%;
+    padding: 20px;
+    border-top: none;
+    font-size: 1rem;
+  }
+
+  .main-header {
+    max-height: 380px;
+    padding: 50px 25px 0;
+  }
+
+  .title {
+    font-size: 2rem;
+    border: none;
+  }
+  h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+  }
+  .arrow {
+    display: none;
+  }
+  .intro {
+    font-size: 1.1rem;
+    margin-top: 10rem;
+  }
+  .resorts,
+  .tips {
+    float: none;
+    width: 100%;
+  }
+  .resorts {
+    margin-bottom: 40px;
+  }
+  .main-footer {
+    padding: 20px 0;
+  }
+  .flexy {
+    display: block;
+    margin-top: 4em;
+  }
+}
+
+@media (max-width: 545px) {
+  .flexy {
+    margin-top: 6em;
+  }
+}
+
+@media (max-width: 420px) {
+  .flexy {
+    margin-top: 10em;
+  }
+}
+
+@media (max-width: 340px) {
+  .flexy {
+    margin-top: 10em;
+  }
+}
